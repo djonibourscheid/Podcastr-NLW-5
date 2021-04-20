@@ -1,1 +1,3 @@
-<h1 style="text-align:center"> 🚧 Em Construção 🚧 </h1>
+<h1 align="center">
+  🚧 Em Construção 🚧
+</h1>

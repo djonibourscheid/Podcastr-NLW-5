@@ -1,8 +1,11 @@
 import { GetStaticProps } from 'next';
-import { api } from '../services/api';
+import Image from 'next/image';
 import { format, parseISO } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
+import { api } from '../services/api';
 import { convertDurationToTimeString } from '../utils/convertDurationToTimeString';
+
+import styles from './home.module.scss';
 
 // type ou interface, tanto faz
 type Episode = {
@@ -20,18 +23,51 @@ type Episode = {
 type HomeProps = {
   // Array precisa receber um tipo. Array<string> ['1', 'a', 'b']
   // Ou podemos usar Episode[]
-  episodes: Episode[];
+  lastestEpisodes: Episode[];
+  allEpisodes: Episode[];
 }
 
 
-export default function Home(props: HomeProps) {
+export default function Home({ lastestEpisodes, allEpisodes }: HomeProps) {
   return (
-    <>
-      <h1>index</h1>
-      <p>{JSON.stringify(props.episodes)}</p>
-    </>
+    <div className={styles.homepage}>
+      <section className={styles.lastestEpisodes}>
+        <h2>Últimos lançamentos</h2>
+
+        <ul>
+          {lastestEpisodes.map(episode => {
+            return (
+              // passamos a prop KEY, com valor unico de cada elemento,
+              // quando temos um .map para o react saber qual item precisa atualizar, por exemplo
+
+              <li key={episode.id}>
+                <Image
+                  width={192}
+                  height={192}
+                  src={episode.thumbnail}
+                  alt={episode.title}
+                  objectFit="cover"
+                />
+
+                <div className={styles.episodeDetails}>
+                  <a href="#">{episode.title}</a>
+                  <p>{episode.members}</p>
+                  <span>{episode.publishedAt}</span>
+                  <span>{episode.durationAsString}</span>
+                </div>
+
+                <button type="button">
+                  <img src="/play-green.svg" alt="Tocar episódio" />
+                </button>
+              </li>
+            )
+          })}
+        </ul>
+      </section>
+    </div>
   )
 }
+
 
 export const getStaticProps: GetStaticProps = async () => {
   // _limit = vai buscar só x registros
@@ -60,10 +96,13 @@ export const getStaticProps: GetStaticProps = async () => {
     };
   })
 
+  const lastestEpisodes = episodes.slice(0, 2);
+  const allEpisodes = episodes.slice(2, episodes.length);
 
   return {
     props: {
-      episodes,
+      lastestEpisodes,
+      allEpisodes,
     },
     revalidate: 60 * 60 * 8,
   }

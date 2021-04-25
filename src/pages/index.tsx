@@ -22,7 +22,7 @@ export default function Home(props: HomeProps) {
   )
 }
 
-export const getStaticPorps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   // _limit = vai buscar só x registros
   // _sort = ordenados por..;
   // _order = crescente ou decrescente

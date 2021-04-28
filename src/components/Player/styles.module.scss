@@ -115,7 +115,7 @@
       cursor: default;
     }
 
-    &:hover:not(disabled) {
+    &:hover:not(:disabled) {
       filter: brightness(0.7);
     }
 
@@ -125,7 +125,7 @@
       border-radius: 1rem;
       background-color: var(--purple-400);
 
-      &:hover:not(disabled) {
+      &:hover:not(:disabled) {
         filter: brightness(0.95);
       }
     }

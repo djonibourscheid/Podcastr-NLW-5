@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { PlayerContext } from '../../contexts/PlayerContext';
 
 import Slider from 'rc-slider';
@@ -9,6 +9,8 @@ import Image from 'next/image';
 import styles from './styles.module.scss';
 
 export function Player() {
+  const audioRef = useRef<HTMLAudioElement>(null);
+
   const {
     episodeList,
     currentEpisodeIndex,
@@ -18,6 +20,19 @@ export function Player() {
 
   const episode = episodeList[currentEpisodeIndex];
 
+  // Play/Pause
+  useEffect(() => {
+    // validando
+    if (!audioRef.current) {
+      return;
+    }
+    // play/pause
+    if (isPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isPlaying])
 
   return (
     <div className={styles.playerContainer}>
@@ -66,6 +81,7 @@ export function Player() {
           {episode || ... } só executa se for false*/}
         {episode && (
           <audio
+            ref={audioRef}
             src={episode.url}
             autoPlay
           />

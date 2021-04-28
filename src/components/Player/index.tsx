@@ -9,7 +9,12 @@ import Image from 'next/image';
 import styles from './styles.module.scss';
 
 export function Player() {
-  const { episodeList, currentEpisodeIndex } = useContext(PlayerContext);
+  const {
+    episodeList,
+    currentEpisodeIndex,
+    isPlaying,
+    togglePlay
+  } = useContext(PlayerContext);
 
   const episode = episodeList[currentEpisodeIndex];
 
@@ -57,6 +62,15 @@ export function Player() {
           <span>00:00</span>
         </div>
 
+        {/*{episode && ... } só executa se for true
+          {episode || ... } só executa se for false*/}
+        {episode && (
+          <audio
+            src={episode.url}
+            autoPlay
+          />
+        )}
+
         <div className={styles.buttons}>
           <button type="button" disabled={!episode}>
             <img src="/shuffle.svg" alt="Embaralhar" />
@@ -66,8 +80,17 @@ export function Player() {
             <img src="/play-previous.svg" alt="Tocar anterior" />
           </button>
 
-          <button type="button" disabled={!episode} className={styles.playButton}>
-            <img src="/play.svg" alt="Tocar" />
+          <button
+            type="button"
+            disabled={!episode}
+            className={styles.playButton}
+            onClick={() => togglePlay()}
+          >
+            {isPlaying
+              ? <img src="/pause.svg" alt="Pausar" />
+              : <img src="/play.svg" alt="Tocar" />
+            }
+
           </button>
 
           <button type="button" disabled={!episode}>

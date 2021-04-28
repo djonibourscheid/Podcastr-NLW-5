@@ -70,6 +70,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: 'blocking'
   }
 }
+// no 'paths' podemos definir páginas para que o next já faça o ssg do que foi passado
+// fallback: false - retorna 404 se tentarmos acessar uma página que não foi passada no 'paths'
+// fallback: true - o que foi passado no 'paths' fica como ssg e o que ainda não foi ele gera na hora do acesso (roda no client)
+// fallback: 'blocking' - só redireciona para a página quando os dados já estiverem carregados (roda no backend do next) melhor para SEO
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const { slug } = ctx.params;

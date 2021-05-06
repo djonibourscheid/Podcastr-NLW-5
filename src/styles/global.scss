@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --white: #FFF;
 
@@ -8,13 +14,19 @@
   --gray-800: #494D4B;
 
   --green-500: #04D361;
-  
+
   --purple-300: #9F75FF;
-  --purple-400: #9164FA; 
+  --purple-400: #9164FA;
   --purple-500: #8257E5;
   --purple-800: #6F48C9;
 }
 
+@media (max-width: 1440px) {
+  html { font-size: 81.25%; } // 13px
+}
+@media (max-width: 1366px) {
+  html { font-size: 75%; } // 12px
+}
 @media (max-width: 1080px) {
   html { font-size: 93.75% } // 15px
 }
@@ -22,11 +34,29 @@
   html { font-size: 87.5% } // 14px
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Créditos do código: Quinhas no github */
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
 }
+
+*::-webkit-scrollbar-track {
+  background-color: var(--gray-50);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--gray-100);
+  border-radius: 0px;
+  border: 0px;
+  &:hover {
+    background-color: var(--gray-200);
+  }
+  &:active {
+    background-color: var(--gray-500);
+  }
+}
+/* fim do código do Quinhas*/
+
 
 body {
   background-color: var(--gray-50);

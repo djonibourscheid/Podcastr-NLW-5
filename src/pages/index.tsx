@@ -55,13 +55,15 @@ export default function Home({ lastestEpisodes, allEpisodes }: HomeProps) {
               // passamos a prop KEY, com valor unico de cada elemento,
               // quando temos um .map para o react saber qual item precisa atualizar, por exemplo
               <li key={episode.id}>
-                <Image
-                  width={192}
-                  height={192}
-                  src={episode.thumbnail}
-                  alt={episode.title}
-                  objectFit="cover"
-                />
+                <Link href={`/episodes/${episode.id}`}>
+                  <Image
+                    width={192}
+                    height={192}
+                    src={episode.thumbnail}
+                    alt={episode.title}
+                    objectFit="cover"
+                  />
+                </Link>
 
                 <div className={styles.episodeDetails}>
                   <Link href={`/episodes/${episode.id}`}>
@@ -100,13 +102,15 @@ export default function Home({ lastestEpisodes, allEpisodes }: HomeProps) {
               return (
                 <tr key={episode.id}>
                   <td style={{ width: 72 }}>
-                    <Image
-                      width={120}
-                      height={120}
-                      src={episode.thumbnail}
-                      alt={episode.title}
-                      objectFit="cover"
-                    />
+                    <Link href={`/episodes/${episode.id}`}>
+                      <Image
+                        width={120}
+                        height={120}
+                        src={episode.thumbnail}
+                        alt={episode.title}
+                        objectFit="cover"
+                      />
+                    </Link>
                   </td>
                   <td>
                     <Link href={`/episodes/${episode.id}`}>

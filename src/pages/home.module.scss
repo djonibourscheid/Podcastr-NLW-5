@@ -34,6 +34,7 @@
         max-height: 6rem;
         border-radius: 0.5rem;
         cursor: pointer;
+        font-size: 0;
       }
 
       .episodeDetails {
@@ -138,8 +139,7 @@
       font-size: 0.875rem;
 
       img {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 3rem;
         border-radius: 0.25rem;
         cursor: pointer;
       }

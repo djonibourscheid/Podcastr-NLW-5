@@ -56,13 +56,15 @@ export default function Home({ lastestEpisodes, allEpisodes }: HomeProps) {
               // quando temos um .map para o react saber qual item precisa atualizar, por exemplo
               <li key={episode.id}>
                 <Link href={`/episodes/${episode.id}`}>
-                  <Image
-                    width={192}
-                    height={192}
-                    src={episode.thumbnail}
-                    alt={episode.title}
-                    objectFit="cover"
-                  />
+                  <a title="Acessar página do episódio" className={styles.imgLinkPage}>
+                    <Image
+                      width={192}
+                      height={192}
+                      src={episode.thumbnail}
+                      alt={episode.title}
+                      objectFit="cover"
+                    />
+                  </a>
                 </Link>
 
                 <div className={styles.episodeDetails}>
@@ -103,13 +105,15 @@ export default function Home({ lastestEpisodes, allEpisodes }: HomeProps) {
                 <tr key={episode.id}>
                   <td style={{ width: 72 }}>
                     <Link href={`/episodes/${episode.id}`}>
-                      <Image
-                        width={120}
-                        height={120}
-                        src={episode.thumbnail}
-                        alt={episode.title}
-                        objectFit="cover"
-                      />
+                      <a title="Acessar página do episódio">
+                        <Image
+                          width={120}
+                          height={120}
+                          src={episode.thumbnail}
+                          alt={episode.title}
+                          objectFit="cover"
+                        />
+                      </a>
                     </Link>
                   </td>
                   <td>

@@ -5,6 +5,18 @@
 </div>
 
 ## Podcastr
+<h1 align="center">
+  <a href="https://github.com/djonibourscheid">
+    <img src="https://img.shields.io/badge/author-djonibourscheid-8257E5?style=flat-square" alt="Author">
+  </a>
+  <a href="#" style="margin: 0 1rem">
+    <img src="https://img.shields.io/github/languages/count/djonibourscheid/Podcastr-NLW5?color=%238257E5&style=flat-square" alt="Languages">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=8257E5&style=flat-square" alt="License">
+  </a>
+</h1>
+
 <h4 align="center">
   Podcastr is a platform built for podcast broadcasting.
 </h4>

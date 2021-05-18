@@ -1,11 +1,10 @@
-<div align="center">
-  <a href="https://podcastr-djonibourscheid.vercel.app">
-    <img src=".github/podcastr-logo.svg" alt="Podcastr logo">
-  </a>
-</div>
-
-## Podcastr
 <h1 align="center">
+  <a href="https://podcastr-djonibourscheid.vercel.app">
+    <img src=".github/podcastr-logo.svg" alt="Podcastr logo" title="Open podcastr preview">
+  </a>
+</h1>
+
+<div align="center">
   <a href="https://github.com/djonibourscheid">
     <img src="https://img.shields.io/badge/author-djonibourscheid-8257E5?style=flat-square" alt="Author">
   </a>
@@ -15,7 +14,7 @@
   <a href="LICENSE">
     <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=8257E5&style=flat-square" alt="License">
   </a>
-</h1>
+</div>
 
 <h4 align="center">
   Podcastr is a platform built for podcast broadcasting.
@@ -23,7 +22,7 @@
 
 <h1 align="center">
   <a href="https://podcastr-djonibourscheid.vercel.app">
-    <img alt="Podcastr preview" title="Podcastr preview" src=".github/podcastr-preview.svg" width="700" />
+    <img alt="Podcastr preview" title="Open podcastr preview" src=".github/podcastr-preview.svg" width="700" />
   </a>
 </h1>
 

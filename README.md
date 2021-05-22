@@ -16,6 +16,15 @@
   </a>
 </div>
 
+<p style="margin: 1rem 0 0.5rem" align="center">
+  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-preview">Preview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-challenges">Challenges</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-license">License</a>
+</p>
+
 <h4 align="center">
   Podcastr is a platform built for podcast broadcasting.
 </h4>
@@ -26,12 +35,14 @@
   </a>
 </h1>
 
-
-## Tecnologies
+## 🧪 Technologies
 - [ReactJS](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 
+## 🔥 Preview
+
+[![Deploy with Vercel](https://vercel.com/button)](https://podcastr-djoni.vercel.app/)
 
 ## 💻 Getting started
 
@@ -85,4 +96,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 
 ---
-> This readme was based on [@guilhermecapitao](https://github.com/guilhermecapitao) and [@josepholiveira](https://github.com/josepholiveira)
+> This readme was based on [@guilhermecapitao](https://github.com/guilhermecapitao), [@josepholiveira](https://github.com/josepholiveira) and [@C0bal](https://github.com/C0bal)
